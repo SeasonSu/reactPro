@@ -1,0 +1,194 @@
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+.Masonry{
+    margin:0;
+    width:100%;
+}
+.loadMore{
+    position:relative;
+    float:left;
+    padding:10px 0;
+    background-color: red;
+    color:#fff;
+    width:100%;
+}
+//list
+.galleryBox{
+	-webkit-box-sizing: border-box;
+    // position: relative;
+    // display: block;
+    text-decoration: none;
+    color: #000000;
+    margin:10px;
+    // float:left;
+    width: 310px;
+    background-color: #fff;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    .coverImg {
+        position: relative;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        /* min-height: 200px; */
+        height: auto;
+        text-align: center;
+        &:after {
+            position: absolute;
+            left: 24px;
+            bottom: 0;
+            width: 27px;
+            height: 8px;
+            content: '.';
+            color: #fff;
+            z-index: 3;
+            background: url('assets/waterfall/ico_arrow.png');
+        }
+        img{
+            max-width:100%;
+            outline: none;
+            border: none;
+            display: block;
+            height: auto;
+            vertical-align: top;
+        }
+        .coverbox {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            overflow: hidden;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            &:hover{
+                opacity:1;
+            }
+            img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 200px;
+                height: 75px;
+                margin: -37px 0 0 -100px;
+                &.scanning {
+                    top: 85%;
+                }
+            }
+            .bg {
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                -webkit-opacity: 0.6;
+                -moz-opacity: 0.6;
+                opacity: 0.6;
+                filter: alpha(opacity=60);
+            }
+        }
+    }
+    .item_content {
+        padding: 22px;
+        zoom: 1;
+        &:after {
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+            content: ".";
+        }
+        .item_name {
+            float: left;
+            width: 184px;
+            font-size: 18px;
+            line-height: 26px;
+            height: 52px;
+            overflow: hidden;
+            padding-right: 10px;
+            border-right: 1px solid #efefef;
+        }
+        .item_head {
+                float: right;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            img{
+                width:100%;height:100%;
+            }
+        }
+    }
+    .item_box {
+        padding: 0 22px 17px;
+        color: #999;
+        zoom: 1;
+        &:after {
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+            content: ".";
+        }
+        .item_type {
+            float: left;
+            background: url('assets/waterfall/tag1.png') 0 50% no-repeat;
+            height: 14px;
+            text-indent: 20px;
+            line-height: 14px;
+        }
+        .item_zan {
+            float: right;
+            background: url('assets/waterfall/tag3.png') 0 50% no-repeat;
+            height: 14px;
+            text-indent: 20px;
+            line-height: 14px;
+             cursor: pointer;
+        }
+        .item_zan_active{
+            background:url('assets/waterfall/tag33.png') 0 50% no-repeat!important;
+            color:#e3a6a6;
+            -webkit-animation-duration: 0.5s;
+            -webkit-animation-name: zan-ani;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: linear;
+        }
+        @-webkit-keyframes zan-ani{
+            0% { -webkit-transform: scale(1) }
+            50% { -webkit-transform:scale(1.2)}
+              100% { -webkit-transform:scale(1)}
+        }
+        .item_forward {
+            padding-right: 20px;
+            float: right;
+            background: url('assets/waterfall/tag4.png') 0 50% no-repeat;
+            height: 14px;
+            text-indent: 20px;
+            line-height: 14px;
+        }
+
+    }
+
+}
